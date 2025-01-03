@@ -36,8 +36,6 @@
             public MyCalendar1()
             {
                 timeSpan = new List<int[]>();
-
-                var abc = new SortedSet<int[]>(Comparer<int[]>.Create((a, b) => a[0] - b[0]));
             }
 
             public override bool Book(int startTime, int endTime)
