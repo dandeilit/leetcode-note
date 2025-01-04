@@ -9,14 +9,14 @@ namespace Test
             {["MyCalendarTwo", "book", "book", "book", "book", "book", "book"],[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]],[null, true, true, true, false, true, true] },
         };
 
-        private bool?[] GetActual(MyCalendarII myCalendarI, string[] eventKey, int[][] eventValue)
+        private bool?[] GetActual(MyCalendarII myCalendarII, string[] eventKey, int[][] eventValue)
         {
             var actual = new Queue<bool?>();
             for (var i = 0; i < eventKey.Length; i++)
             {
                 if (eventKey[i] == "book")
                 {
-                    actual.Enqueue(myCalendarI.Book(eventValue[i][0], eventValue[i][1]));
+                    actual.Enqueue(myCalendarII.Book(eventValue[i][0], eventValue[i][1]));
                 }
                 else
                 {
