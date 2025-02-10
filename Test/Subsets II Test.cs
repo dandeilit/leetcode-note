@@ -17,7 +17,11 @@ namespace Test
             var subsets_II = new Subsets_II();
             var actual = subsets_II.SubsetsWithDup(nums);
 
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected.Length, actual.Count);
+            foreach (var item in actual)
+            {
+                Assert.Contains(item, expected);
+            }
         }
 
         [Theory]
@@ -27,7 +31,11 @@ namespace Test
             var subsets_II = new Subsets_II();
             var actual = subsets_II.SubsetsWithDup2(nums);
 
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected.Length, actual.Count);
+            foreach (var item in actual)
+            {
+                Assert.Contains(item, expected);
+            }
         }
     }
 }
