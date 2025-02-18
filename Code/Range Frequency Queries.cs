@@ -28,6 +28,7 @@
         /// 哈希 + SortedSet
         /// 超时
         /// SortedSet.GetViewBetween() 时间复杂度为 O(logn) 但 SortedSet.GetCount() 时间复杂度为 O(n)
+        /// SortedSet.GetViewBetween() 利用 TreeSubSet 实现
         /// </summary>
         public class RangeFreqQuery
         {
