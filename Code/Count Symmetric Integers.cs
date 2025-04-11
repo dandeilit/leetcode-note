@@ -44,5 +44,34 @@
             }
             return res;
         }
+
+        /// <summary>
+        /// 暴力枚举
+        /// </summary>
+        /// <param name="low"></param>
+        /// <param name="high"></param>
+        /// <returns></returns>
+        public int CountSymmetricIntegers2(int low, int high)
+        {
+            int ans = 0;
+            for (int i = low; i <= high; i++)
+            {
+                char[] crr = i.ToString().ToCharArray();
+                int n = crr.Length;
+                if (n % 2 == 0)
+                {
+                    int n2 = n / 2;
+                    int s1 = 0;
+                    int s2 = 0;
+                    for (int j = 0; j < n2; j++)
+                    {
+                        s1 += crr[j] - 48;
+                        s2 += crr[j + n2] - 48;
+                    }
+                    if (s1 == s2) ans++;
+                }
+            }
+            return ans;
+        }
     }
 }

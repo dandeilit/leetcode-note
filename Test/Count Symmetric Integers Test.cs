@@ -18,5 +18,14 @@ namespace Test
             var actual = count_Symmetric_Integers.CountSymmetricIntegers(low, high);
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [MemberData(nameof(TestData))]
+        public void Test2(int low, int high, int expected)
+        {
+            var count_Symmetric_Integers = new Count_Symmetric_Integers();
+            var actual = count_Symmetric_Integers.CountSymmetricIntegers2(low, high);
+            Assert.Equal(expected, actual);
+        }
     }
 }
