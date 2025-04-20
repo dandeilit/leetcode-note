@@ -29,7 +29,7 @@ namespace Test
 
         [Theory]
         [MemberData(nameof(TestData))]
-        public void Test2(int[] nums, int lower, int upper, long expected)
+        public void Test3(int[] nums, int lower, int upper, long expected)
         {
             var count_the_Number_of_Fair_Pairs = new Count_the_Number_of_Fair_Pairs();
             var actual = count_the_Number_of_Fair_Pairs.CountFairPairs3(nums, lower, upper);
