@@ -44,7 +44,7 @@
         /// </summary>
         /// <param name="nums"></param>
         /// <returns></returns>
-        public int FindRHS2(int[] nums)
+        public int FindLHS2(int[] nums)
         {
             Dictionary<int, int> dictionary = new Dictionary<int, int>();
             int res = 0;
